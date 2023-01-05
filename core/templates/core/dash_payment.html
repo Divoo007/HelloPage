@@ -1,0 +1,87 @@
+{% extends 'core/dash_base.html' %}
+{% block content %}      <!-- Add Payment Method-->
+
+          <!-- Content-->
+          <div class="col-lg-8">
+            <div class="d-flex flex-column h-100 bg-light rounded-3 shadow-lg p-4">
+              <div class="py-2 p-md-3">
+                <!-- Title-->
+                <h1 class="h3 mb-3 pb-2 text-center text-sm-start">Payment methods</h1>
+                <!-- Alert-->
+                <div class="alert alert-info fs-sm mb-4" role="alert"><i class="ai-alert-circle fs-lg mt-n1 me-2"></i>Primary payment method is used by default</div>
+                <!-- Payment methods (table)-->
+                <div class="table-responsive fs-md">
+                  <table class="table table-hover mb-0">
+                    <thead>
+                      <tr>
+                        <th>Your credit / debit cards</th>
+                        <th>Name on card</th>
+                        <th>Expires on</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="py-3 align-middle">
+                          <div class="d-flex align-items-center"><img class="me-2" src="/static/img/account/cards/card-visa.png" alt="Visa" width="39">
+                            <div><span class="fw-medium text-heading me-1">Visa</span>ending in 4999<span class="align-middle badge bg-info ms-2">Primary</span></div>
+                          </div>
+                        </td>
+                        <td class="py-3 align-middle">Amanda Wilson</td>
+                        <td class="py-3 align-middle">08 / 2023</td>
+                        <td class="py-3 align-middle"><a class="nav-link-style me-2" href="#" data-bs-toggle="tooltip" title="Edit"><i class="ai-edit"></i></a><a class="nav-link-style text-danger" href="#" data-bs-toggle="tooltip" title="Remove">
+                            <div class="ai-trash-2"></div></a></td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 align-middle">
+                          <div class="d-flex align-items-center"><img class="me-2" src="/static/img/account/cards/card-master.png" alt="MasterCard" width="39">
+                            <div><span class="fw-medium text-heading me-1">MasterCard</span>ending in 0015</div>
+                          </div>
+                        </td>
+                        <td class="py-3 align-middle">Amanda Wilson</td>
+                        <td class="py-3 align-middle">11 / 2024</td>
+                        <td class="py-3 align-middle"><a class="nav-link-style me-2" href="#" data-bs-toggle="tooltip" title="Edit"><i class="ai-edit"></i></a><a class="nav-link-style text-danger" href="#" data-bs-toggle="tooltip" title="Remove">
+                            <div class="ai-trash-2"></div></a></td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 align-middle">
+                          <div class="d-flex align-items-center"><img class="me-2" src="/static/img/account/cards/card-paypal.png" alt="PayPal" width="39">
+                            <div><span class="fw-medium text-heading me-1">PayPal</span>{{ usr.user }}</div>
+                          </div>
+                        </td>
+                        <td class="py-3 align-middle">&mdash;</td>
+                        <td class="py-3 align-middle">&mdash;</td>
+                        <td class="py-3 align-middle"><a class="nav-link-style me-2" href="#" data-bs-toggle="tooltip" title="Edit"><i class="ai-edit"></i></a><a class="nav-link-style text-danger" href="#" data-bs-toggle="tooltip" title="Remove">
+                            <div class="ai-trash-2"></div></a></td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 align-middle">
+                          <div class="d-flex align-items-center"><img class="me-2" src="/static/img/account/cards/card-visa.png" alt="Visa" width="39">
+                            <div><span class="fw-medium text-heading me-1">Visa</span>ending in 6073</div>
+                          </div>
+                        </td>
+                        <td class="py-3 align-middle">Amanda Wilson</td>
+                        <td class="py-3 align-middle">09 / 2025</td>
+                        <td class="py-3 align-middle"><a class="nav-link-style me-2" href="#" data-bs-toggle="tooltip" title="Edit"><i class="ai-edit"></i></a><a class="nav-link-style text-danger" href="#" data-bs-toggle="tooltip" title="Remove">
+                            <div class="ai-trash-2"></div></a></td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 align-middle">
+                          <div class="d-flex align-items-center"><img class="me-2" src="/static/img/account/cards/card-visa.png" alt="Visa" width="39">
+                            <div><span class="fw-medium text-heading me-1">Visa</span>ending in 9791</div>
+                          </div>
+                        </td>
+                        <td class="py-3 align-middle">Amanda Wilson</td>
+                        <td class="py-3 align-middle">05 / 2025</td>
+                        <td class="py-3 align-middle"><a class="nav-link-style me-2" href="#" data-bs-toggle="tooltip" title="Edit"><i class="ai-edit"></i></a><a class="nav-link-style text-danger" href="#" data-bs-toggle="tooltip" title="Remove">
+                            <div class="ai-trash-2"></div></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr class="mt-0 mb-4">
+                <div class="text-sm-end"><a class="btn btn-primary" href="#add-payment" data-bs-toggle="modal">Add payment method</a></div>
+              </div>
+            </div>
+          </div>
+{% endblock %}
