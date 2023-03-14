@@ -1,9 +1,6 @@
 # Server
 /db.sqlite3
-/hp_uwsgi.ini
-/hp.sock
 /manage.py
-/www.hellopage.tech.conf
 
 
 # Static
