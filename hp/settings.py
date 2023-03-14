@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-gf8t4_%q85uj#y+9jt&v+snhs+qz9ve&8%bi-mw!5((q-!(^+#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','www.hellopage.tech']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -117,17 +117,17 @@ USE_TZ = True
 
 env = 'prod'
 
-EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST = ''
 EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-DEFAULT_FROM_EMAIL = ' noreply.hellopage@gmail.com'
-ADMINS = [('Divyansh', 'divyansh@dwivedi.me')]
-SERVER_EMAIL = 'noreply.hellopage@gmail.com'
-ADMIN_EMAIL = 'divyansh@dwivedi.me'
-SUPPORT_EMAIL = 'divyansh@dwivedi.me'
+DEFAULT_FROM_EMAIL = ''
+ADMINS = [('')]
+SERVER_EMAIL = ''
+ADMIN_EMAIL = ''
+SUPPORT_EMAIL = ''
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

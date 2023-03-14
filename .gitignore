@@ -1,0 +1,28 @@
+# Server
+db.sqlite3
+hp_uwsgi.ini
+hp.sock
+manage.py
+www.hellopage.tech.conf
+
+
+# Static
+/static/admin
+/static/components
+/static/css
+/static/docs
+/static/fonts
+/static/hp
+/static/js
+/static/img
+/static/vendor
+/static/site.webmanifest
+
+# media
+/media/hero-img.png
+
+# core
+/core/static
+/core/templates
+/core/migrations
+/core/__pyache__

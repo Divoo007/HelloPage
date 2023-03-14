@@ -14,11 +14,6 @@ def token_alphanum16():
 def token_alphanum36():
     return token_alphanum(36)
 
-def hs_hash(str):
-    salt = 'HireSure:'
-    str = salt + str
-    return md5(str.encode("utf-8")).hexdigest()
-
 def token_digit():
     ran = random.randint(100000, 999999)
     return ran
