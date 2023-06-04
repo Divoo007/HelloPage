@@ -117,18 +117,18 @@ USE_TZ = True
 
 env = 'prod'
 
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
 #EMAIL_HOST_PASSWORD = '(Please insert sendgrid API key)'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-ADMINS = [('Vineet Kumar', 'vineet@dwivedi.me'),]
-ADMIN_EMAIL = 'divyansh@dwivedi.me'
-SERVER_EMAIL = 'hello@mindquest.games'
-DEFAULT_FROM_EMAIL = 'MindQuest Games <hello@mindquest.games>'
-MQ_OWNER_EMAILS = ['vineet@dwivedi.me']
-CS_MANAGER_EMAILS = ['vineet@dwivedi.me']
+ADMINS = []
+ADMIN_EMAIL = ''
+SERVER_EMAIL = ''
+DEFAULT_FROM_EMAIL = ''
+MQ_OWNER_EMAILS = []
+CS_MANAGER_EMAILS = []
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
