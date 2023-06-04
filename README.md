@@ -18,3 +18,29 @@ Websites like Wix are designed for professional use but can be confusing. Hellop
 The code excels in efficient backend handling, ensuring smooth performance without consuming excessive RAM. It's ideal for complex websites or heavy traffic. Simplicity and ease of implementation are additional strengths. The code eliminates complicated frontend handling requests, making it accessible to developers of all levels. It streamlines the process, allowing focus on creative vision.
 
 In conclusion, Hellopage provides convenient and user-friendly solutions for professional website creation. The code's efficiency guarantees optimal performance while the simplicity makes it accessible. With the potential for customization and personalization, developers can express their creativity freely. As technology advances, we can expect further innovation in website creation and design.
+
+# Operation of the code:
+
+## Libraries used:
+
+Django 
+
+```
+pip install django
+```
+
+
+## Migrations:
+
+Head over to your terminal, inside the Hellopage directly. Then run the following commands:
+
+```
+python3 manage.py collectstatic
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+
+## Notes:
+
+1. Please note, for the email code, you will require a sendgrid API key. To avoid the confusion, i have commented that code. For testing purposes, you can use 123456 as your OTP
+2. The recover password is facing some issues. Please avoid using that feature for now.
