@@ -1,0 +1,134 @@
+{% extends 'core/base.html' %}
+{% block content %}
+        <main class="page-wrapper">
+
+      <!-- Page content-->
+              <!-- Page title-->
+      <section class="position-relative bg-dark pt-7 pb-5 pb-md-7 bg-size-cover bg-attachment-fixed" style="background-image: url(img/demo/web-studio/cubes-bg.jpg);">
+        <div class="shape shape-bottom shape-curve bg-body">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
+            <path fill="currentColor" d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path>
+          </svg>
+        </div>
+        <div class="container position-relative zindex-5 text-center pt-md-6 pt-lg-7 py-5 my-lg-3">
+          <h1 class="text-light mb-0">Portfolio Grid<span class="h2 d-inline-block bg-faded-primary text-primary px-3 py-2 rounded-3 ms-3">Style 1</span></h1>
+        </div>
+      </section>
+      <!-- Portfolio grid-->
+      <section class="container overflow-hidden py-5 py-md-6 py-lg-7">
+        <div class="masonry-filterable pt-3 pt-md-0">
+          <ul class="masonry-filters nav nav-tabs justify-content-center pb-4">
+            <li class="nav-item"><a class="nav-link active" href="#" data-group="all">All</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-group="software">Software - Agency</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-group="corporate">Corporate - Business</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-group="shopping">Shopping - Business</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-group="responsive">Web Design - Responsive</a></li>
+          </ul>
+
+            <div class="masonry-grid" data-columns="3">
+
+            <!-- Block - Creative Agency -->
+            <div class="masonry-grid-item" data-groups="[&quot;corporate&quot;, &quot;software&quot;]">
+                <a class="card card-hover border-0 shadow" href="/creage/1">
+                <img class="card-img-top" src="/static/hp/blocks/agency-ss.png" alt="Portfolio thumb">
+                <div class="card-body text-center">
+                  <h3 class="h5 nav-heading mb-2">Creative Agency</h3>
+                  <p class="fs-sm text-muted mb-2">Software, Corporate</p>
+                </div>
+                </a>
+            </div>
+
+              <!-- Block - Multitasking -->
+            <div class="masonry-grid-item" data-groups="[&quot;responsive&quot;, &quot;corporate&quot;]">
+              <a class="card card-hover border-0 shadow" href="/multitask/2">
+                <img class="card-img-top" src="/static/hp/blocks/multitasking-ss.png" alt="Portfolio thumb">
+                <div class="card-body text-center">
+                  <h3 class="h5 nav-heading mb-2">Multitask</h3>
+                  <p class="fs-sm text-muted mb-2">Corporate, Responsive</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Block - Business -->
+            <div class="masonry-grid-item" data-groups="[&quot;software&quot;]">
+                <a class="card card-hover border-0 shadow" href="/business/3">
+                    <img class="card-img-top" src="/static/hp/blocks/business-ss.png" alt="Portfolio thumb">
+                  <div class="card-body text-center">
+                  <h3 class="h5 nav-heading mb-2">Business</h3>
+                  <p class="fs-sm text-muted mb-2">Corporate, Business, Agency</p>
+                </div>
+                </a>
+            </div>
+
+
+            <div class="masonry-grid-item" data-groups="[&quot;shopping&quot;]">
+                <a class="card card-hover border-0 shadow" href="/shoping/4">
+                    <img class="card-img-top" src="/static/hp/blocks/shoping-ss.png" alt="Portfolio thumb">
+                <div class="card-body text-center">
+                  <h3 class="h5 nav-heading mb-2">Shoping</h3>
+                  <p class="fs-sm text-muted mb-2">Shoping, Items</p>
+                </div>
+                </a>
+            </div>
+<!--
+            <div class="masonry-grid-item" data-groups="[&quot;responsive&quot;]"><a class="card card-hover border-0 shadow" href="portfolio-single-carousel.html"><img class="card-img-top" src="img/portfolio/05.jpg" alt="Portfolio thumb">
+                <div class="card-body text-center">
+                  <h3 class="h5 nav-heading mb-2">Mobile App Icon Design</h3>
+                  <p class="fs-sm text-muted mb-2">Mobile App Design</p>
+                </div></a></div>
+            <div class="masonry-grid-item" data-groups="[&quot;software&quot;, &quot;responsive&quot;]"><a class="card card-hover border-0 shadow" href="portfolio-single-carousel.html"><img class="card-img-top" src="img/portfolio/06.jpg" alt="Portfolio thumb">
+                <div class="card-body text-center">
+                  <h3 class="h5 nav-heading mb-2">Auto Reseller Website</h3>
+                  <p class="fs-sm text-muted mb-2">UI / UX Design, Web Development</p>
+                </div></a></div>-->
+          </div>
+        </div>
+      <form>
+      {% csrf_token %}
+        <div class="text-center py-3 pb-md-0">
+            <button class="btn btn-primary" type="submit"><i class="ai-refresh-ccw me-2"></i>Load More</button>
+        </div>
+          {% if comesoon == True %}
+              <h3 class="h5 nav-heading mb-2"> Coming Soon! </h3>
+          {% endif %}
+      </form>
+      </section>
+    </main>
+<!--
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3"><a class="d-block nav-heading text-center" href="#">
+                <div class="card card-hover border-0 shadow-lg mb-4"><img class="card-img" src="/static/img/demo/presentation/demos/web-studio.jpg" alt="Web Studio"></div>
+                <h3 class="h5 nav-heading-title mb-0">Web Studio</h3><span class="fs-sm fw-normal text-muted">Web Design, Portfolio, Agency</span></a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3"><a class="d-block nav-heading text-center" href="#">
+                <div class="card card-hover border-0 shadow-lg mb-4"><img class="card-img" src="/static/img/demo/presentation/demos/software-landing.jpg" alt="Product Landing - Software"></div>
+                <h3 class="h5 nav-heading-title mb-0">Product Landing - Software</h3><span class="fs-sm fw-normal text-muted">Software, Showcase, Landing Page</span></a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3"><a class="d-block nav-heading text-center" href="#">
+                <div class="card card-hover border-0 shadow-lg mb-4"><img class="card-img" src="/static/img/demo/presentation/demos/gadget-landing.jpg" alt="Product Landing - Gadget"></div>
+                <h3 class="h5 nav-heading-title mb-0">Product Landing - Gadget</h3><span class="fs-sm fw-normal text-muted">Gadget, Showcase, Landing Page</span></a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3"><a class="d-block nav-heading text-center" href="#">
+                <div class="card card-hover border-0 shadow-lg mb-4"><img class="card-img" src="/static/img/demo/presentation/demos/mobile-app.jpg" alt="Mobile App Showcase"></div>
+                <h3 class="h5 nav-heading-title mb-0">Mobile App Showcase</h3><span class="fs-sm fw-normal text-muted">Mobile App, Showcase, Landing</span></a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3"><a class="d-block nav-heading text-center" href="#">
+                <div class="card card-hover border-0 shadow-lg mb-4"><img class="card-img" src="/static/img/demo/presentation/demos/coworking.jpg" alt="Coworkin Space"></div>
+                <h3 class="h5 nav-heading-title mb-0">Coworking Space</h3><span class="fs-sm fw-normal text-muted">Coworking Space Landing Page</span></a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3"><a class="d-block nav-heading text-center" href="#">
+                <div class="card card-hover border-0 shadow-lg mb-4"><img class="card-img" src="/static/img/demo/presentation/demos/event-landing.jpg" alt="Event Landing"></div>
+                <h3 class="h5 nav-heading-title mb-0">Event Landing</h3><span class="fs-sm fw-normal text-muted">Landing Page, Event, Countdown, Tickets</span></a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3"><a class="d-block nav-heading text-center" href="#">
+                <div class="card card-hover border-0 shadow-lg mb-4"><img class="card-img" src="/static/img/demo/presentation/demos/template-presentation.jpg" alt="Web Template Presentation"></div>
+                <h3 class="h5 nav-heading-title mb-0">Web Template Presentation</h3><span class="fs-sm fw-normal text-muted">Showcase your Web Template features beautifully</span></a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3"><a class="d-block nav-heading text-center" href="#">
+                <div class="card card-hover border-0 shadow-lg mb-4"><img class="card-img" src="/static/img/demo/presentation/demos/marketing-seo.jpg" alt="Digital Marketing &amp; SEO"></div>
+                <h3 class="h5 nav-heading-title mb-0">Digital Marketing &amp; SEO</h3><span class="fs-sm fw-normal text-muted">Marketing services, Agency, Portfolio</span></a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3"><a class="d-block nav-heading text-center" href="#">
+                <div class="card card-hover border-0 shadow-lg mb-4"><img class="card-img" src="/static/img/demo/presentation/demos/food-blog.jpg" alt="Food Blog"></div>
+                <h3 class="h5 nav-heading-title mb-0">Food Blog</h3><span class="fs-sm fw-normal text-muted">Cooking, Recipes, Personal Blog</span></a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3"><a class="d-block nav-heading text-center" href="#">
+                <div class="card card-hover border-0 shadow-lg mb-4"><img class="card-img" src="/static/img/demo/presentation/demos/personal-portfolio.jpg" alt="Personal Portfolio"></div>
+                <h3 class="h5 nav-heading-title mb-0">Personal Portfolio</h3><span class="fs-sm fw-normal text-muted">Cooking, Recipes, Personal Blog</span></a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter pb-3"><img class="d-block mb-4" src="/static/img/demo/presentation/demos/coming.png" alt="Coming">
+              <h3 class="h5 text-center mb-0">Coming Soon</h3>
+            </div>-->
+          </div>
+        </div>
+      </section>
+{% endblock %}

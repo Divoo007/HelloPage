@@ -29,7 +29,7 @@ def view(request,pagename):
     meta = {
         'title': 'Frequently Asked Questions | HelloPage'
     }
-    context = {'meta': meta, 'blocks': block_htmls, 'hpdev': hpdev}
+    context = {'meta': meta, 'blocks': block_htmls, 'hpdev': hpdev, 'pagename': pagename}
     return render(request, 'core/page/demo-creative-agency.html', context)
 
 def edit_block(request,block_id):

@@ -1,5 +1,4 @@
 import random
-
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from core.form import SignUpForm
 from django.http import HttpResponse, Http404
@@ -15,13 +14,13 @@ from core.utils import crypto_utils
 
 def signup(request):
     eror = False
-    submitted = False
     if request.method == 'POST':
         signup_form = SignUpForm(request.POST)
         if signup_form.is_valid():
             if request.POST['password'] == request.POST['confirmPassword']:
                 signup = signup_form.save()
                 otp = random.randint(100000, 999999)
+                otp = 123456
                 signup.otp = otp
                 signup.save()
                 html_content = render_to_string('core/emails/signup.html',context={'signup':signup})
@@ -31,9 +30,8 @@ def signup(request):
                                    to=[signup.email],
                                    bcc=[site_settings.ADMIN_EMAIL], )
                 msg.content_subtype = "html"
-                resp = msg.send(fail_silently=False)
+                resp=msg.send(fail_silently=True)
                 print(resp)
-                submitted = True
                 return redirect('/user/signup_confirm/'+str(signup.id))
             else:
                 messages.add_message(request, messages.ERROR,'Password and confirm password do not match')
@@ -43,11 +41,10 @@ def signup(request):
     meta = {
         'title': 'Sign Up | HelloPage'
     }
-    context = {'meta': meta, 'submitted': submitted, 'eror': eror}
+    context = {'meta': meta, 'eror': eror}
     return render(request, 'core/signup.html', context)
 
 def signup_confirm(request, id):
-    submitted = False
     signup = SignUp.objects.get(id=id)
     # check if signup is expired
     if request.method == 'POST':
@@ -104,8 +101,9 @@ def recover(request):
                             to=[email],
                             bcc=[site_settings.ADMIN_EMAIL], )
         msg.content_subtype = "html"
-        msg.send(fail_silently=False)
+        msg.send(fail_silently=True)
         confirm = True
+        return redirect('/user/recover_confirm/'+str(recov.token))
     meta = {
         'title': 'Recover you Account | HelloPage'
     }
@@ -164,14 +162,6 @@ def dash_notif(request):
     context = {'meta': meta, 'usr': usr}
     return render(request, 'core/comingsoon.html', context)
 
-def premium(request):
-    meta = {
-        'title': 'HelloPage Premium | HelloPage'
-    }
-    usr = None
-    if request.user.is_authenticated:
-        usr=HPUser.objects.filter(user=request.user)
-    context = {'meta': meta, 'usr': usr}
-    return render(request, 'core/comingsoon.html', context)
+
 
 

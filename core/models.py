@@ -39,6 +39,7 @@ class Contact(models.Model):
 creativeagency = {
     'title': 'random',
     'subtitle': 'random',
+    'videolink': 'https://www.youtube.com/watch?v=8HmtP1dGk-A&t=4s',
     'videotitle': 'random'
 }
 

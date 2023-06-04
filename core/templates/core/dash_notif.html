@@ -1,0 +1,49 @@
+{% extends 'core/dash_base.html' %}
+{% block content %}
+          <!-- Content-->
+          <div class="col-lg-8">
+            <div class="d-flex flex-column h-100 bg-light rounded-3 shadow-lg p-4">
+              <div class="py-2 p-md-3">
+                <!-- Title-->
+                <h1 class="h3 mb-3 pb-2 text-center text-sm-start">Notifications</h1>
+                <!-- Notification settings-->
+                <div id="notification-settings">
+                  <div class="bg-secondary rounded-3 p-4 fs-sm text-heading">Use the master switch on the left hand side (Accoun menu) to <span class="fw-medium">Enable / disable all notifications</span></div>
+                  <div class="border-bottom py-4 p-sm-4">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="nf-product-sold" checked>
+                      <label class="form-check-label fs-sm text-heading" for="nf-product-sold">Product sold notifications</label>
+                    </div><small class="form-text">Send an email when someone purchased one of my products</small>
+                  </div>
+                  <div class="border-bottom py-4 p-sm-4">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="nf-product-updated" checked>
+                      <label class="form-check-label fs-sm text-heading" for="nf-product-updated">Product update notifications</label>
+                    </div><small class="form-text">Send an email when a product I've purchased is updated</small>
+                  </div>
+                  <div class="border-bottom py-4 p-sm-4">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="nf-product-comment">
+                      <label class="form-check-label fs-sm text-heading" for="nf-product-comment">Product comment notifications</label>
+                    </div><small class="form-text">Send an email when someone comments on one of my products</small>
+                  </div>
+                  <div class="border-bottom py-4 p-sm-4">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="nf-product-review" checked>
+                      <label class="form-check-label fs-sm text-heading" for="nf-product-review">Product review notification</label>
+                    </div><small class="form-text">Send an email when someone leaves a review with their rating</small>
+                  </div>
+                  <div class="border-bottom py-4 p-sm-4">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="nf-daily-summary">
+                      <label class="form-check-label fs-sm text-heading" for="nf-daily-summary">Daily summary emails</label>
+                    </div><small class="form-text">Send me a daily summary of all products sold, commented or reviewed</small>
+                  </div>
+                  <div class="text-center text-sm-end mt-4 pt-2">
+                    <button class="btn btn-primary" type="button"><i class="ai-save fs-lg me-2"></i>Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      {% endblock %}

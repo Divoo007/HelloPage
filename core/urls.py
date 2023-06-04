@@ -23,7 +23,6 @@ urlpatterns = [
     path('dashboard/payment', user.dash_payment, name='dash_profile'),
     path('dashboard/notif', user.dash_notif, name='dash_profile'),
     path('creator', about.creator, name = 'creator'),
-    path('premium', user.premium, name='premium'),
     path('develop', about.develop, name='develop'),
     path('view/<str:pagename>', page.view, name='develop'),
     path('edit_block/<int:block_id>', page.edit_block, name='devform'),
